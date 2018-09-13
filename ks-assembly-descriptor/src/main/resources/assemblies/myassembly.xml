@@ -1,5 +1,5 @@
 <assembly>
-    <id>ks-common</id>
+    <id>my-ks-assembly</id>
     <formats>
         <format>tar.gz</format>
     </formats>
@@ -10,21 +10,25 @@
             <includes>
                 <include>*.sh</include>
             </includes>
-            <outputDirectory>/bin</outputDirectory>
+            <outputDirectory>bin</outputDirectory>
         </fileSet>
         <fileSet>
             <directory>${project.basedir}/src/main/resources</directory>
             <excludes>
                 <exclude>*.sh</exclude>
             </excludes>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory></outputDirectory>
         </fileSet>
         <fileSet>
             <directory>${project.build.directory></directory>
             <includes>
                 <include>*.jar</include>
             </includes>
-            <outputDirectory>/libs</outputDirectory>
+            <outputDirectory>libs</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/tmp</directory>
+            <outputDirectory></outputDirectory>
         </fileSet>
     </fileSets>
 
